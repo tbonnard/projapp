@@ -4,6 +4,8 @@ import { Link } from "react-router-dom"
 
 import { createAccount } from '../../reducers/userReducer'
 
+import Notification from '../Notification'
+
 const AccountForm = () => {
 
     const dispatch = useDispatch()
@@ -23,16 +25,19 @@ const AccountForm = () => {
 
 
     return (
-        <div className='containerGlobal'>
-            <h2>Create an account</h2>
-            <form onSubmit={handleCreateAccount}>
-                <input type="email" placeholder='your email' value={email} onChange={(e) => setEmail(e.target.value)} />
-                <input type="password" placeholder='your password (6 characters min)' value={password} onChange={(e) => setPassword(e.target.value)}/>
-                <input type="password" placeholder='confirm your password' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
-                <button type='submit'>Create</button>
-            </form>
-            <p>Already have an account?
-            <Link className='' to="/signin"> login to your account</Link></p>
+        <div className='login_register'>
+            <div className='login_registerForm'>
+                <h2>Create an account</h2>
+                <form onSubmit={handleCreateAccount}>
+                    <input type="email" placeholder='your email' value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <input type="password" placeholder='your password (6 characters min)' value={password} onChange={(e) => setPassword(e.target.value)}/>
+                    <input type="password" placeholder='confirm your password' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
+                    <button type='submit'>Create</button>
+                </form>
+                <p>Already have an account?
+                <Link className='' to="/signin"> login to your account</Link></p>
+            </div>
+            <Notification />
         </div>
     )
 }

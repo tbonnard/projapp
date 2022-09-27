@@ -65,11 +65,11 @@ const App = () => {
           </Route>
 
         <Route path='/signin'>
-          {user === null ? <><LoginForm /><Notification /></> : <Redirect to="/app/profile" />}         
+          {user === null ? <LoginForm /> : <Redirect to="/app/profile" />}         
         </Route>
 
         <Route path='/signup'>
-          {user === null ? <><AccountForm /><Notification /></>  : <Redirect to="/app/profile" />}      
+          {user === null ? <AccountForm /> : <Redirect to="/app/profile" />}      
         </Route>
  
         <Route path='/app/daily'>

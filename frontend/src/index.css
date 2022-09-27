@@ -62,7 +62,7 @@ code {
 }
 
 .SubSection1{
-  padding: 100px 50px;
+  padding: 150px 50px 70px 50px;
 }
 
 .SubSection1 h1 {
@@ -75,6 +75,14 @@ padding: 20px 0;
 
 .SubSection1 button {
   padding: 10px 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.SubSection1 button:hover {
+  background-color: var(--blue);
+  color: white;
+  border-color: white;
 }
 
 .buttonSubSection1 {
@@ -82,8 +90,45 @@ padding: 20px 0;
 }
 
 .section{
-  padding: 50px 50px;
+  padding: 70px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: 0 auto;
+}
 
+.sectionItem{
+  flex-basis: 33.333333%;
+  /* margin-bottom: 70px; */
+  height: 150px;
+  padding: 20px 0;
+  font-weight: bold;
+}
+
+.sectionItem:hover{
+  box-shadow: rgba(37, 87, 152, 0.2) 0px 1px 0px 0px outset;  
+  color: var(--blue);
+  background-color: #3a7dd714;
+  border-radius: 10px;
+}
+
+.descItemHome{
+  display: none;
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--text_default);
+  font-weight: normal;
+}
+
+.sectionItem:hover .descItemHome{
+  display: block;
+
+}
+
+.iconsHome{
+  width: 30px;
+  filter: var(--blue_icon);
+  margin-bottom: 20px;
 }
 
 .subSection{
@@ -116,13 +161,48 @@ padding: 20px 0;
 
 
 
+/* login_register */
+.login_register{
+  background-color: var(--blue);
+  margin: 0 auto;
+  height: 100vh;
+  width: 100%;
+}
+
+.login_registerForm{
+  background-color: white;
+  padding: 100px 100px;
+  margin: 0 auto;
+  width: 40%;
+  margin-top: 10%;
+}
+
+.login_registerForm div, input, p, h2, button {
+ margin: 10px 0;
+}
+
+.login_registerForm button{
+  background-color: var(--blue);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.login_registerForm button:hover{
+  background-color: white;
+  color: var(--blue);
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-color: var(--blue);
+}
+
+
 /* GLOBAL CONTAINER */
 .initContainer{
   /* display: grid;
   grid-template-columns: 200px auto 250px;
   width: 100vw;  */
   /* height: 100vh;*/
-
   display: flex;
   justify-content: space-between;
 }
