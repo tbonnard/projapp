@@ -32,4 +32,21 @@ loginRouter.post('/', async (request, response) => {
   })
 
 
+loginRouter.post('/demo', async (request, response) => {
+
+  const user = await User.findOne({ type: 3 }) 
+
+  const userForToken = {
+    email: user.email,
+    id: user._id,
+  }
+
+  const token = jwt.sign(userForToken, process.env.SECRET)
+
+  response
+    .status(200)
+    .send({ token, email: user.email })
+})
+
+
 module.exports = loginRouter

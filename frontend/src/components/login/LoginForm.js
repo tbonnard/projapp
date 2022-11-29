@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from "react-router-dom"
 
-import { userLogin } from '../../reducers/userReducer'
+import { userLogin , userLoginDemo} from '../../reducers/userReducer'
 
 import Notification from '../Notification'
 
@@ -22,6 +22,11 @@ const LoginForm = () => {
 
     }
 
+    const handleDemo = (e) => {
+        e.preventDefault()
+        dispatch(userLoginDemo())
+    }
+
     return (
             <div className='login_register'>
                 <div className='login_registerForm'>
@@ -31,7 +36,9 @@ const LoginForm = () => {
                         <input type="password" placeholder='your password' value={password} onChange={(e) => setPassword(e.target.value)}/>
                         <div className=''>
                             <button type='submit'>Login</button>
+                            <button className='demoLogin' onClick={handleDemo}>connect as demo</button>
                         </div>
+
                     </form>
                     <p>Don't have an account?
                     <Link className='' to="/signup"> create an account</Link></p>

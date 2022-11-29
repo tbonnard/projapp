@@ -137,6 +137,11 @@ padding: 20px 0;
   padding-top: 40px;
 }
 
+
+.demoLogin{
+  margin-left: 20px;
+}
+
 /* NOTIF */
 .notifGlobal {
   background-color: var(--default);

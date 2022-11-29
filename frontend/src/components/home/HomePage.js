@@ -1,6 +1,10 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
+
+import { userLoginDemo } from '../../reducers/userReducer'
+
 
 import todoIcon from '../../files/todo.svg';
 import dailyIcon from '../../files/daily.svg';
@@ -11,6 +15,7 @@ import accountIcon from '../../files/account.svg';
 
 const HomePage = () => {
     const history = useHistory();
+    const dispatch = useDispatch()
 
     const user = useSelector(state => state.user)
 
@@ -24,6 +29,15 @@ const HomePage = () => {
         }
     }
 
+    const handleDemo = (e) => {
+        e.preventDefault()
+        dispatch(userLoginDemo())
+        setTimeout(() => {
+            let path = `app/todos`; 
+            history.push(path); 
+        }, 500);
+    }
+
     return (
         <div className='containerGlobalHome'>
             <div className="section1">
@@ -32,8 +46,10 @@ const HomePage = () => {
                 <p>Just your personal everyday work tool</p>
                 <p>it is not a collaborative tool, but a simple personal work space</p>
                 <div className="buttonSubSection1">
-                <button onClick={handleClick}>start</button>
+                    <button onClick={handleClick}>start</button>
+                    <button className='demoLogin' onClick={handleDemo}>connect as demo</button>
                 </div>
+                {/* <button onClick={handleDemo}>connect as demo</button> */}
                 </div>
             </div>
             <div className="section">

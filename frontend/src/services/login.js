@@ -7,5 +7,10 @@ const loginUser = async credentials => {
     return response.data
 }
 
-const exportedObject = { loginUser }
+const loginUserDemo = async () => {
+    const response = await axios.post(`${baseUrl}/demo`)
+    return response.data
+}
+
+const exportedObject = { loginUser, loginUserDemo }
 export default exportedObject

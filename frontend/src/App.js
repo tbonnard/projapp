@@ -61,7 +61,7 @@ const App = () => {
       <Switch>
 
         <Route path='/app/profile'>
-            {user === null? <Redirect to="/signup" /> : <UserInfo /> }         
+            {user === null? <Redirect to="/" /> : <UserInfo /> }         
           </Route>
 
         <Route path='/signin'>
@@ -73,32 +73,32 @@ const App = () => {
         </Route>
  
         <Route path='/app/daily'>
-          {user !== null ? <><Dailys /><DailyRightColumn /></>  : <Redirect to="/" />}      
+          {user !== null ? <><Dailys /><DailyRightColumn /></>  : <Redirect to="/signin" />}      
         </Route>
 
         <Route path='/app/notes'>          
-          {user !== null ? <><Notes menuView={menuView} /><NoteRightColumn /></>  : <Redirect to="/" />}      
+          {user !== null ? <><Notes menuView={menuView} /><NoteRightColumn /></>  : <Redirect to="/signin" />}      
         </Route>
 
         <Route path='/app/todos'>
-          {user !== null ? <><ToDos /><ToDoRightColumn /></>  : <Redirect to="/" />}      
+          {user !== null ? <><ToDos /><ToDoRightColumn /></>  : <Redirect to="/signin" />}      
         </Route>
         
         <Route path='/app/items'>
-          {user !== null ? <><Items menuView={menuView} /><ItemsRightColumn /></>  : <Redirect to="/" />}      
+          {user !== null ? <><Items menuView={menuView} /><ItemsRightColumn /></>  : <Redirect to="/signin" />}      
         </Route>
 
         <Route path='/app/status'>
-            {user !== null ? <><Projects /><ProjectStatusRightColumn /></>  : <Redirect to="/" />}      
+            {user !== null ? <><Projects /><ProjectStatusRightColumn /></>  : <Redirect to="/signin" />}      
         </Route>
 
         <Route path='/app/setup' >
-          <ProjectsSetup />
-          {user !== null ? <><ProjectsSetup /></>  : <Redirect to="/" />}      
+          {user !== null ? <><ProjectsSetup /></>  : <Redirect to="/signin" />}      
         </Route>
 
         <Route path='/' >
-          <HomePage />
+          {/* <HomePage /> */}
+          <Redirect to="/signin" />
         </Route>
 
 

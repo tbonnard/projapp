@@ -69,7 +69,7 @@ const ProjectStatusRightColumn = () => {
                 <div className='sectionRighColumn'>
                     <div className='sectionRighColumnFilterTop'>
                         <span className='sectionRighColumnTitle'>TAGS</span>
-                        <Link className='navLink' to="/setup"><img className='filterSettingsIcon' src={settingsIcon} alt='Update tags' title='Update tags'/></Link>
+                        <Link className='navLink' to="/app/setup"><img className='filterSettingsIcon' src={settingsIcon} alt='Update tags' title='Update tags'/></Link>
                     </div>
                     <div className='subSectionRighColumn'>
                         <ProjectsList projects={projects} />
