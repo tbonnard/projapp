@@ -32,10 +32,12 @@ const AccountForm = () => {
                     <input type="email" placeholder='your email' value={email} onChange={(e) => setEmail(e.target.value)} />
                     <input type="password" placeholder='your password (6 characters min)' value={password} onChange={(e) => setPassword(e.target.value)}/>
                     <input type="password" placeholder='confirm your password' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
-                    <button type='submit'>Create</button>
+                    <div>
+                        <button className='login_registerFormButton' type='submit'>Create</button>
+                    </div>
                 </form>
                 <p>Already have an account?
-                <Link className='' to="/signin"> login to your account</Link></p>
+                <Link className='linkConnect' to="/signin"> Login to your account.</Link></p>
             </div>
             <Notification />
         </div>

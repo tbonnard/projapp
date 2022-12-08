@@ -35,13 +35,13 @@ const LoginForm = () => {
                         <input type="email" placeholder='your email' value={email} onChange={(e) => setUsername(e.target.value)} />
                         <input type="password" placeholder='your password' value={password} onChange={(e) => setPassword(e.target.value)}/>
                         <div className=''>
-                            <button type='submit'>Login</button>
-                            <button className='demoLogin' onClick={handleDemo}>connect as demo</button>
+                            <button className='login_registerFormButton' type='submit'>Login</button>
+                            <button className='login_registerFormButton demoLogin' onClick={handleDemo}>connect as demo</button>
                         </div>
 
                     </form>
                     <p>Don't have an account?
-                    <Link className='' to="/signup"> create an account</Link></p>
+                    <Link className='linkConnect' to="/signup"> Create an account.</Link></p>
                 </div>
                 <Notification />
             </div>

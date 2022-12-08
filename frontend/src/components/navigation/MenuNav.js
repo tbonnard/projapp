@@ -5,6 +5,8 @@ import { useLocation } from 'react-router-dom'
 
 import MenuNavExpand from "./MenuNavExpand";
 import MenuNavCollapse from "./MenuNavCollapse";
+import { setMenuMobileView } from "../../reducers/menuExpandCollapseReducer";
+
 
 const MenuNav = ({user}) => {
     const dispatch = useDispatch()
@@ -12,9 +14,10 @@ const MenuNav = ({user}) => {
 
     const menuView = useSelector(state => state.menuExpandCollapse)
 
+
     useEffect(() => {
         let navDiv = document.querySelector('.nav')
-        if (!menuView.left) {
+        if (!menuView.left && navDiv) {
             navDiv.className='nav navAnim'       
         } 
       }, [dispatch, menuView])
@@ -23,8 +26,13 @@ const MenuNav = ({user}) => {
       if (!location.pathname.includes('/app/')) {
         return null
       } 
+      
+      else if (window.innerWidth < 600) {
+        return <> {<MenuNavCollapse user={user} menuView={menuView}/> } </>
+      } 
+
     
-    return (
+    else return (
         <>
             {menuView.left ? <MenuNavExpand user={user} menuView={menuView}/> : <MenuNavCollapse user={user} menuView={menuView}/> }
         </>

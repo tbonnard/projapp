@@ -46,7 +46,7 @@ const DailyRightColumn = () => {
 
 
     return (
-        <div className="rightColumnInit rightColumn">
+        <div className="rightColumnInit">
 
             {menuView.right ? 
             <div className='rightColumnItems'>

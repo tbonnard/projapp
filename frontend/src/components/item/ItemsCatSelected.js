@@ -32,10 +32,10 @@ const ItemsCatSelected = ({selectedDiscItem}) => {
             <div className='itemsListElementsTop'>
                 <div className='itemsListElementsTop1'>
                     {selectedDiscItem.defaultAdmin ?
-                    <h4 className='itemTitle'>Items to discuss at the next {selectedDiscItem.description}</h4> 
+                    <h4 className='itemTitle'>Items to discuss at the {selectedDiscItem.description}</h4> 
                     :
                     <>
-                        <h4 className='itemTitle'>Items to discuss at the next </h4>
+                        <h4 className='itemTitle'>Items to discuss at the </h4>
                         <input type="text" className='itemTitleInput' placeholder="enter your item" value={description} onChange={(e) => handleUpdateTitleItem(e)} />  
                     </>
                     } 

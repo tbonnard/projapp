@@ -39,7 +39,7 @@ const Profile = ({item, currentProfile}) => {
         <div className='item itemProfile'>
             {currentProfile.id !== item.id ?
             <div>
-                <img className='unfilterIcon' src={changeProfile} alt='Change profile' title={`Change profile`} onClick={handleChange}/>
+                <img className='iconNotSelectedProfile' src={changeProfile} alt='Change profile' title={`Change profile`} onClick={handleChange}/>
             </div>
             :
             <div>

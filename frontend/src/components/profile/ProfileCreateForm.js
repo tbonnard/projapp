@@ -20,7 +20,7 @@ const ProfileCreateForm = () => {
         <div className='createProject'>
             <form onSubmit={handleCreateItem} className='createProject'>
                 <input autoFocus={true} type="text" placeholder="add a new profile" value={title} onChange={(e) => setTitle(e.target.value)} /> 
-                <button type='submit'>Create</button>
+                <button className='login_registerFormButton' type='submit'>Create</button>
             </form>
         </div>
     )

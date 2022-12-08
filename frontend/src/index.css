@@ -140,6 +140,23 @@ padding: 20px 0;
 
 .demoLogin{
   margin-left: 20px;
+  background-color: white !important;
+  color: var(--blue) !important;
+  border-color: var(--blue) !important;
+}
+
+.demoLogin:hover{
+  background-color: var(--blue) !important;
+  color: white!important;
+  border-color: white!important;
+}
+
+.linkConnect{
+  color: var(--blue);
+}
+
+.linkConnect:hover{
+  color: var(--text_default);
 }
 
 /* NOTIF */
@@ -176,9 +193,9 @@ padding: 20px 0;
 
 .login_registerForm{
   background-color: white;
-  padding: 100px 100px;
+  padding: 75px;
   margin: 0 auto;
-  width: 40%;
+  width: 55%;
   margin-top: 10%;
 }
 
@@ -186,19 +203,32 @@ padding: 20px 0;
  margin: 10px 0;
 }
 
-.login_registerForm button{
+.login_registerFormButton{
   background-color: var(--blue);
   color: white;
   padding: 10px 20px;
   border-radius: 10px;
 }
 
-.login_registerForm button:hover{
+.login_registerFormButton:hover{
   background-color: white;
   color: var(--blue);
   padding: 10px 20px;
   border-radius: 10px;
   border-color: var(--blue);
+}
+
+.logoutButton{
+  background-color: var(--dark);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+.logoutButton:hover{
+  background-color: white;
+  color: var(--dark);
 }
 
 
@@ -720,7 +750,7 @@ button:hover {
 }
 
 .selectedIcon{
-  width: 24px;
+  width: 22px;
   cursor: default;
   margin: 0 10px 0 0;
 }
@@ -872,7 +902,7 @@ textarea:hover{
 
 .item {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   padding: 5px 0 5px 0px;
 }
 
@@ -1022,12 +1052,15 @@ textarea:hover{
 
 .itemTitle{
   margin-right: 5px;
+  line-height: 2;
 }
 
 .itemTitleInput{
-width: 40%;
-font-weight: bold;
-color: var(--text_default); 
+  width: 40%;
+  font-weight: bold;
+  color: var(--text_default); 
+  margin: 0;
+  line-height: 2;
 }
 
 .categoryRightBox{
@@ -1419,6 +1452,16 @@ color: var(--text_default);
 }
 
 
+.iconNotSelectedProfile{
+  margin-right: 10px;
+  width: 22px;
+  cursor: pointer;
+  padding: 0 0px 0 0px;
+}
+
+.iconNotSelectedProfile:hover{
+  opacity: 0.5;
+}
 
 
 
@@ -1486,5 +1529,59 @@ color: var(--text_default);
 
   .lineItem{
     width: 80%;
+  }
+
+  .expandCollapse, .expandIconRight{
+    display: none;
+  }
+
+  .nav, .navAnim{
+    flex-basis: 45px;
+  }
+
+  .rightColumnAnim{
+    flex-basis: 45px;
+  }
+
+  .buttonIcons{
+    padding: 5px 5px 1px 5px;
+  }
+
+  .containerGlobal{
+    padding: 40px 2px;
+  }
+
+  .noteGlobalStructure{
+    display: block;
+  }
+
+  .noteTopRightSectionRightSelect{
+    display: block;
+    width: 75%;
+  }
+
+  .itemsListElements{
+   margin: 40px 0 0 0; 
+  }
+
+  .itemsListElementsTop1 {
+    display: block;
+  }
+
+  
+  .itemTitleInput{
+    width: 100%;
+  }
+
+  .notesLeftTitle{
+    width: 100%;
+  }
+}
+
+
+
+@media (max-width: 490px) {
+  .demoLogin{
+    margin-left: 5px;
   }
 }

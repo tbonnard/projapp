@@ -8,7 +8,7 @@ const ToDo = require('../models/itemToDo')
 
 
 const categoryInitial = ["Daily", "Retro", "Planning"]
-const statusInitial = ["Keep in mind", "To do", "In progress", "Blocked/Pending", "Validation", "Done"]
+const statusInitial = ["Keep in mind", "To do", "In progress", "Blocked / Pending", "Validation", "Done"]
 const projectInitial = ["Unassigned"]
 
 // https://yusuals.herokuapp.com/api/admin_init/

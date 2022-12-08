@@ -70,7 +70,7 @@ const ItemsRightColumn = () => {
     }
 
     return (
-        <div className="rightColumnInit rightColumn">
+        <div className="rightColumnInit">
             
             {menuView.right ? 
             <div className='rightColumnItems'>

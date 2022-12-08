@@ -27,8 +27,8 @@ const UserInfo = () => {
     return (
         <div className='containerGlobal'>
             <h2>Hi {user.email}!</h2>
-            <button onClick={handleLogout}>Logout</button>
             <Profiles />
+            <button className='logoutButton' onClick={handleLogout}>Logout</button>
         </div>
     )
 }
