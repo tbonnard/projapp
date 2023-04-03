@@ -5,6 +5,11 @@ import { useHistory } from "react-router-dom";
 import changeProfile from '../../files/change_profile.png'
 import selectedIcon from '../../files/selected.png'
 
+import {getUserItemsToDo} from '../../reducers/itemsToDoReducer'
+import { getUserProjects } from '../../reducers/projectReducer'
+import { projectUnselect } from '../../reducers/projectSelectedReducer'
+import { getUserStatus } from '../../reducers/statusReducer'
+
 import { updateProfile } from '../../reducers/profilesReducer'
 import { changeCurrentProfile } from '../../reducers/profileCurrentReducer'
 
@@ -13,13 +18,12 @@ const Profile = ({item, currentProfile}) => {
     const dispatch = useDispatch()
 
     const history = useHistory();
-
     const [title, setTitle] = useState(item.title)
 
-    const handleChange = () => {
+    const handleChange = () =>  {
         const itemObject = {id:item.id}
         dispatch(changeCurrentProfile(itemObject))
-        let path = `/app/todos`; 
+        let path = `/app/profile`; 
         history.push(path);
     }
 

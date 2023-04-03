@@ -65,7 +65,7 @@ const App = () => {
           </Route>
 
         <Route path='/signin'>
-          {user === null ? <LoginForm /> : <Redirect to="/app/profile" />}         
+          {user === null ? <LoginForm /> : <Redirect to="/app/todos" />}         
         </Route>
 
         <Route path='/signup'>
