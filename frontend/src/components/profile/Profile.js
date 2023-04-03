@@ -19,7 +19,7 @@ const Profile = ({item, currentProfile}) => {
     const handleChange = () => {
         const itemObject = {id:item.id}
         dispatch(changeCurrentProfile(itemObject))
-        let path = `/`; 
+        let path = `/app/todos`; 
         history.push(path);
     }
 
